@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { FaPaw } from 'react-icons/fa';
 
 interface FormularioClinicoProps {
   onSubmit?: (data: any) => void;
@@ -51,15 +52,18 @@ export default function FormularioClinico({ onSubmit }: FormularioClinicoProps) 
           <label className="block text-sm font-semibold text-gray-700 mb-2">
             Nome do Paciente
           </label>
-          <input
-            type="text"
-            name="nome"
-            value={formData.nome}
-            onChange={handleChange}
-            placeholder="Digite o nome do animal"
-            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
-            required
-          />
+          <div className="relative">
+            <input
+              type="text"
+              name="nome"
+              value={formData.nome}
+              onChange={handleChange}
+              placeholder="Digite o nome do animal"
+              className="w-full px-4 py-3 pr-12 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
+              required
+            />
+            <FaPaw className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          </div>
         </div>
 
         {/* Grid de dados clínicos */}
@@ -69,14 +73,17 @@ export default function FormularioClinico({ onSubmit }: FormularioClinicoProps) 
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               SDMA (µg/dL)
             </label>
-            <input
-              type="text"
-              name="sdma"
-              value={formData.sdma}
-              onChange={handleChange}
-              placeholder="Ex: 14"
-              className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
-            />
+            <div className="relative">
+              <input
+                type="text"
+                name="sdma"
+                value={formData.sdma}
+                onChange={handleChange}
+                placeholder="Ex: 14"
+                className="w-full px-4 py-3 pr-12 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
+              />
+              <FaPaw className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            </div>
           </div>
 
           {/* Creatinina */}
@@ -84,14 +91,17 @@ export default function FormularioClinico({ onSubmit }: FormularioClinicoProps) 
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               Creatinina (mg/dL)
             </label>
-            <input
-              type="text"
-              name="creatinina"
-              value={formData.creatinina}
-              onChange={handleChange}
-              placeholder="Ex: 1.2"
-              className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
-            />
+            <div className="relative">
+              <input
+                type="text"
+                name="creatinina"
+                value={formData.creatinina}
+                onChange={handleChange}
+                placeholder="Ex: 1.2"
+                className="w-full px-4 py-3 pr-12 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
+              />
+              <FaPaw className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            </div>
           </div>
 
           {/* Idade */}
@@ -99,14 +109,17 @@ export default function FormularioClinico({ onSubmit }: FormularioClinicoProps) 
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               Idade (anos)
             </label>
-            <input
-              type="text"
-              name="idade"
-              value={formData.idade}
-              onChange={handleChange}
-              placeholder="Ex: 5"
-              className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
-            />
+            <div className="relative">
+              <input
+                type="text"
+                name="idade"
+                value={formData.idade}
+                onChange={handleChange}
+                placeholder="Ex: 5"
+                className="w-full px-4 py-3 pr-12 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
+              />
+              <FaPaw className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            </div>
           </div>
 
           {/* Sexo */}
@@ -131,14 +144,17 @@ export default function FormularioClinico({ onSubmit }: FormularioClinicoProps) 
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               Peso (kg)
             </label>
-            <input
-              type="text"
-              name="peso"
-              value={formData.peso}
-              onChange={handleChange}
-              placeholder="Ex: 25.5"
-              className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
-            />
+            <div className="relative">
+              <input
+                type="text"
+                name="peso"
+                value={formData.peso}
+                onChange={handleChange}
+                placeholder="Ex: 25.5"
+                className="w-full px-4 py-3 pr-12 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
+              />
+              <FaPaw className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            </div>
           </div>
 
           {/* Pressão Arterial */}
@@ -146,14 +162,17 @@ export default function FormularioClinico({ onSubmit }: FormularioClinicoProps) 
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               Pressão Arterial (mmHg)
             </label>
-            <input
-              type="text"
-              name="pressaoArterial"
-              value={formData.pressaoArterial}
-              onChange={handleChange}
-              placeholder="Ex: 120/80"
-              className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
-            />
+            <div className="relative">
+              <input
+                type="text"
+                name="pressaoArterial"
+                value={formData.pressaoArterial}
+                onChange={handleChange}
+                placeholder="Ex: 120/80"
+                className="w-full px-4 py-3 pr-12 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
+              />
+              <FaPaw className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            </div>
           </div>
 
           {/* UPC */}
@@ -161,14 +180,17 @@ export default function FormularioClinico({ onSubmit }: FormularioClinicoProps) 
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               UPC
             </label>
-            <input
-              type="text"
-              name="upc"
-              value={formData.upc}
-              onChange={handleChange}
-              placeholder="Ex: 0.5"
-              className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
-            />
+            <div className="relative">
+              <input
+                type="text"
+                name="upc"
+                value={formData.upc}
+                onChange={handleChange}
+                placeholder="Ex: 0.5"
+                className="w-full px-4 py-3 pr-12 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
+              />
+              <FaPaw className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            </div>
           </div>
         </div>
 
@@ -177,14 +199,17 @@ export default function FormularioClinico({ onSubmit }: FormularioClinicoProps) 
           <label className="block text-sm font-semibold text-gray-700 mb-2">
             Sintomas (separados por vírgula)
           </label>
-          <input
-            type="text"
-            name="sintomas"
-            value={formData.sintomas}
-            onChange={handleChange}
-            placeholder="Ex: letargia, vômito, perda de apetite"
-            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              name="sintomas"
+              value={formData.sintomas}
+              onChange={handleChange}
+              placeholder="Ex: letargia, vômito, perda de apetite"
+              className="w-full px-4 py-3 pr-12 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
+            />
+            <FaPaw className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          </div>
         </div>
 
         {/* Comorbidades */}
@@ -192,14 +217,17 @@ export default function FormularioClinico({ onSubmit }: FormularioClinicoProps) 
           <label className="block text-sm font-semibold text-gray-700 mb-2">
             Comorbidades (separadas por vírgula)
           </label>
-          <input
-            type="text"
-            name="comorbidades"
-            value={formData.comorbidades}
-            onChange={handleChange}
-            placeholder="Ex: diabetes, hipertensão"
-            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              name="comorbidades"
+              value={formData.comorbidades}
+              onChange={handleChange}
+              placeholder="Ex: diabetes, hipertensão"
+              className="w-full px-4 py-3 pr-12 bg-white border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-800 placeholder-gray-400"
+            />
+            <FaPaw className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          </div>
         </div>
 
         {/* Pergunta */}
